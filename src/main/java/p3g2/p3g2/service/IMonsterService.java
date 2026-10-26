@@ -6,8 +6,6 @@ import java.util.List;
  * IMonsterService
  */
 public interface IMonsterService {
-    Monster findById(Long id);
-    List<Monster> findAll();
-    void save(Monster monster);
+    Monster findById(int id);
     
 }

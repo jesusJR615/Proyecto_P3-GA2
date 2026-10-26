@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class MonsterController {
 
     @GetMapping("/monster/{id}")
-        public String getMoString(@PathVariable int id) {
-            return monsterService.findById(id);
+        public Monster fin(@PathVariable int id) {
+          
         }
         
     

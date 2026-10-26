@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController 
 public class PotionController {
 
-     @GetMapping("/monster/{id}")
-        public String getMoString(@PathVariable int id) {
-            return new String();
+     @GetMapping("/Potion/{id}") {
+        
+       
         }
     
 }

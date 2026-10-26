@@ -16,7 +16,7 @@ import p3g2.p3g2.models.Monster;
 import tools.jackson.databind.ObjectMapper;
 
 @Component
-public class MonsterRopositoryJson implements IMonsterRopository {
+public class MonsterRepositoryJson implements IMonsterRepository {
     @Autowired
     private List<Monster> monsters = new ArrayList<>();
 
@@ -24,7 +24,7 @@ public class MonsterRopositoryJson implements IMonsterRopository {
      * Constructor por defecto que carga los datos desde
      * "classpath:json/monsters.json".
      */
-    public MonsterRopositoryJson() {
+    public MonsterRepositoryJson() {
         Resource resource = new ClassPathResource("json/monsters.json");
         readValueJson(resource);
     }

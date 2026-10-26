@@ -10,7 +10,6 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
-
 import p3g2.p3g2.models.HauntedHouse;
 import tools.jackson.databind.ObjectMapper;
 
@@ -32,7 +31,8 @@ public class HauntedHouseRepositoryJson implements IHauntedHouseRepository {
         ObjectMapper objectMapper = new ObjectMapper();
         try {
 
-            // Deserializa el JSON en un array de hauntedhouses y luego lo convierte en lista
+            // Deserializa el JSON en un array de hauntedhouses y luego lo convierte en
+            // lista
             hauntedhouses = new ArrayList<>(
                     Arrays.asList(objectMapper.readValue(resource.getInputStream(), HauntedHouse[].class)));
 
@@ -40,7 +40,6 @@ public class HauntedHouseRepositoryJson implements IHauntedHouseRepository {
             e.printStackTrace(); // En un proyecto real convendría manejar la excepción de forma más robusta
         }
     }
-
 
     // Creo el método findById
     public HauntedHouse findById(int id) {

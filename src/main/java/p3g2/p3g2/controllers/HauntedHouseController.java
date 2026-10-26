@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController 
 public class HauntedHouseController {
 
-     @GetMapping("/monster/{id}")
+     @GetMapping("/enter/{id}")
         public String getMoString(@PathVariable int id) {
             return new String();
         }
