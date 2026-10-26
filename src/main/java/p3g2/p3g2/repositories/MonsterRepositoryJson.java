@@ -17,7 +17,6 @@ import tools.jackson.databind.ObjectMapper;
 
 @Component
 public class MonsterRepositoryJson implements IMonsterRepository {
-    @Autowired
     private List<Monster> monsters = new ArrayList<>();
 
    /**

@@ -15,7 +15,6 @@ import tools.jackson.databind.ObjectMapper;
 
 @Component
 public class HauntedHouseRepositoryJson implements IHauntedHouseRepository {
-    @Autowired
     private List<HauntedHouse> hauntedhouses = new ArrayList<>();
 
     /**

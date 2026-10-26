@@ -17,7 +17,6 @@ import tools.jackson.databind.ObjectMapper;
 
 @Component
 public class PotionRepositoryJson implements IPotionRepository {
-    @Autowired
     private List<Potion> potions = new ArrayList<>();
 
    /**
