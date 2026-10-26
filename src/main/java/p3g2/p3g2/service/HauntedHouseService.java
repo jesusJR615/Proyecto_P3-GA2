@@ -12,7 +12,11 @@ import p3g2.p3g2.repositories.IHauntedHouseRepository;
  */
 @Service
 public class HauntedHouseService implements IHauntedHouseService {
-    private final IHauntedHouseRepository hauntedRepository = null;
+    private final IHauntedHouseRepository hauntedRepository;
+
+    public HauntedHouseService(IHauntedHouseRepository hauntedRepository) {
+        this.hauntedRepository = hauntedRepository;
+    }
 
     @Override
     public HauntedHouse findById(int id) {

@@ -25,10 +25,10 @@ public class PotionService implements IPotionService {
     @Override
     public Potion findById(int id) {
         Potion potion = potionRepository.findById(id);
-        //Realizo la comprobacion de si la poción está caducada
-        if(potion != null && potion.getExpirationDate().before(new Date())){
-              throw new PotionExpiredException("La poción " + potion.getName() + " está caducada");
+        // Realizo la comprobacion de si la poción está caducada
+        if (potion != null && potion.getExpirationDate().before(new Date())) {
+            throw new PotionExpiredException("La poción " + potion.getName() + " está caducada");
         }
-        return  potion;
+        return potion;
     }
 }

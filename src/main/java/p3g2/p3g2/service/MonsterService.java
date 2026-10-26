@@ -10,12 +10,16 @@ import p3g2.p3g2.repositories.IMonsterRepository;
 /**
  * MonsterService
  */
-@Service 
-public class MonsterService implements IMonsterService{
-    private final IMonsterRepository monsterRepository = null;
+@Service
+public class MonsterService implements IMonsterService {
+    private final IMonsterRepository monsterRepository;
 
-    @Override 
-    public Monster findById(int id){
+    public MonsterService(IMonsterRepository monsterRepository) {
+        this.monsterRepository = monsterRepository;
+    }
+
+    @Override
+    public Monster findById(int id) {
         return monsterRepository.findById(id);
     }
 
