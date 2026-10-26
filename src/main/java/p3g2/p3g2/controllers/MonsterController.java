@@ -12,7 +12,7 @@ public class MonsterController {
 
     @GetMapping("/monster/{id}")
         public String getMoString(@PathVariable int id) {
-            return new String();
+            return monsterService.findById(id);
         }
         
     
