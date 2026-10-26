@@ -23,7 +23,7 @@ public class HauntedHouseController {
     }
 
     @GetMapping("/enter/{id}")
-    public String findById(@PathVariable int id) {
+    public HauntedHouse findById(@PathVariable int id) {
     HauntedHouse house = hauntedhousesService.findById(id);
     // Compruebo si la casa es igual a nulo
     if (house == null) {
@@ -34,11 +34,11 @@ public class HauntedHouseController {
         throw new HauntedHouseClosedException("La casa esta cerrada");
     }
     // Compruebo el nivel de miedo de la casa
-    if (house.getScareLevel() >= 9) {
+    if (house.getScareLevel() >= 8) {
         throw new TooScaryException("La casa da mucho miedo");
     }
 
-    return house.toString();
+    return house;
 
 }
 }
